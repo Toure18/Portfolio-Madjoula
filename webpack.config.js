@@ -6,6 +6,7 @@ if (!Encore.isRuntimeEnvironmentConfigured()) {
     Encore.configureRuntimeEnvironment(process.env.NODE_ENV || 'dev');
 }
 
+
 Encore
     // directory where compiled assets will be stored
     .setOutputPath('public/build/')
@@ -13,6 +14,11 @@ Encore
     .setPublicPath('/build')
     // only needed for CDN's or sub-directory deploy
     //.setManifestKeyPrefix('build/')
+    .enableVersioning()
+    .copyFiles({
+        from: './assets/picture',
+        pattern: /\.(png|jpg|jpeg|svg)$/
+    })
 
     /*
      * ENTRY CONFIG
