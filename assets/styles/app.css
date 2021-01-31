@@ -1,3 +1,50 @@
-body {
-    background-color: lightgray;
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    background-image: url('/build/background.png');
+    background-size: cover;
+    padding: 2%;
+    opacity : 0.6;
+}
+
+figure{
+    text-align: center;
+}
+
+nav figure img{
+    width: 200px;
+    border-radius: 50%;
+    margin: 1%;
+    filter: none;
+    opacity : 1;
+}
+
+figcaption{
+    color: white;
+    font-size: 45px;
+}
+
+.presentation{
+    padding: 90px;
+    box-shadow: 10px 5px 10px #D8BFD8;
+    margin: 2%;
+    border-radius: 2% ;
+    border: 5px #DDA0DD1A solid;
+}
+
+.presentation h1{
+    text-align: center;
+    margin-bottom: 5%;
+}
+
+.presentation p{
+    text-align: justify;
+    font-size: 30px;
+}
+
+figure img{
+    width: 350px;
 }
