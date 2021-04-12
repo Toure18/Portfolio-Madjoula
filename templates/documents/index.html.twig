@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello DocumentsController!{% endblock %}
+
+   {% block stylesheets %}
+       {{ encore_entry_link_tags('document') }}
+   {% endblock %}
+
+{% block body %}
+    {% for document in documents %}
+
+        <object type="application/pdf" width="100%" height="100%">
+            <param name="src" value="{{ document.name }}" />
+            <section class="center-aligned">
+                <img src="{{ asset('build/cv-picture.png') }}" class="border border-4 border-secondary w-25 m-5 background-image" alt="cv">
+                <div class="text text-bold"><a href="{{ document.docPdf }}" class="fs-2">Cliquez ici pour télécharger le fichier PDF.</a>
+                    <br> <p class="text-center fs-2">{{ document.name }}</p></div>
+            </section>
+        </object>
+
+
+    {% endfor %}
+{% endblock %}

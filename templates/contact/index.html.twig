@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ContactController!{% endblock %}
+
+{% block body %}
+
+
+    <div class="card text-center">
+        <div class="card-header display-5">Contact</div>
+        {% for message in app.flashes('success') %}
+            <div class="alert alert-secondary fs-2">
+                {{ message }}
+            </div>
+        {% endfor %}
+        <div class="card-body">
+            {{ form_start(form, {'attr': {'class': 'm-5'}}) }}
+            <h1 class="text-bold text-decoration-underline text-center">Contacter moi</h1>
+            <div class="mb-2">
+                <label for="{{ form.Name.vars.id }}"></label>
+                {{ form_widget(form.Name) }}
+            </div>
+            <div class="mb-2">
+                <label for="{{ form.Compagny_Name.vars.id }}"></label>
+                {{ form_widget(form.Compagny_Name) }}
+            </div>
+            <div class="mb-2">
+                <label for="{{ form.mail.vars.id }}"></label>
+                {{ form_widget(form.mail) }}
+            </div>
+            <div class="mb-2">
+                <label for="{{ form.body_text.vars.id }}"></label>
+                {{ form_widget(form.body_text) }}
+            </div>
+            {{ form_end(form) }}
+            <hr>
+            <p class="display-6 text-center p-5 m-4">Programmer un appel, via mon lien Calendly : <a href="https://calendly.com/madjoula-toure">https://calendly.com/madjoula-toure</a></p>
+        </div>
+        <div class="card-footer">
+            <h1 class="display-5">Mes cordonnées:</h1>
+            <div class="body-footer d-flex justify-content-center m-1">
+                <p class="fs-2 m-3"><i class="fas fa-mobile-alt"></i>: <a href="tel:+33637690470" class="fs-1">0637690470</a></p>
+                <p class="fs-2 m-3"><i class="fas fa-at"></i>: <a href="mailto:tmadjoula@gmail.com" class="fs-1">tmadjoula@gmail.com</a></p>
+            </div>
+        </div>
+    </div>
+
+
+
+{% endblock %}
