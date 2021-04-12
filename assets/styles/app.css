@@ -1,50 +1,36 @@
 *{
-    margin: 0;
     padding: 0;
+    margin: 0;
+    font-family: 'Alegreya', serif;
 }
 
-nav{
-    background-image: url('/build/background.png');
-    background-size: cover;
-    padding: 2%;
-    opacity : 0.6;
+html,body{
+   height: 100%;
 }
 
-figure{
-    text-align: center;
-}
-
-nav figure img{
-    width: 200px;
-    border-radius: 50%;
-    margin: 1%;
-    filter: none;
-    opacity : 1;
-}
-
-figcaption{
-    color: white;
-    font-size: 45px;
+body {
+    display: flex;
+    flex-direction: column;
 }
 
 .presentation{
-    padding: 90px;
-    box-shadow: 10px 5px 10px #D8BFD8;
-    margin: 2%;
-    border-radius: 2% ;
-    border: 5px #DDA0DD1A solid;
+    box-shadow: inset 0px 20px 20px 0px #f2f2f2;
+    transition: opacity .4s ease-in-out;
+    padding: 105px;;
 }
 
-.presentation h1{
-    text-align: center;
-    margin-bottom: 5%;
-}
-
-.presentation p{
+.card-body{
     text-align: justify;
-    font-size: 30px;
+    font-size: 35px;
 }
 
-figure img{
-    width: 350px;
+/* footer style */
+footer{
+    margin-top: auto;
+    padding: 15px;
+}
+@media screen and (max-width: 699px){
+    .card-body{
+        font-size: 25px;
+    }
 }

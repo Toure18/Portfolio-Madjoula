@@ -1,0 +1,21 @@
+.center-aligned {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.background-image {
+    position: relative;
+    opacity: 0.55;
+}
+
+.text {
+    position: absolute;
+    text-align: justify;
+    border:  3px solid lavender;
+    background-color: white;
+    opacity: 0.8;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin: 5% 5% 5% 5%;
+}

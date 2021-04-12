@@ -1,0 +1,15 @@
+
+/* style picture document*/
+.center-aligned {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.background-image {
+    position: relative;
+}
+
+.text {
+    position: absolute;
+}
