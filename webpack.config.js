@@ -17,7 +17,11 @@ Encore
     .enableVersioning()
     .copyFiles({
         from: './assets/picture',
-        pattern: /\.(png|jpg|jpeg|svg)$/
+        pattern: /\.(png|jpg|jpeg|svg|pdf)$/
+    })
+    .copyFiles({
+        from: './assets/document',
+        pattern: /\.(png|jpg|jpeg|svg|pdf)$/
     })
 
     /*
@@ -26,7 +30,12 @@ Encore
      * Each entry will result in one JavaScript file (e.g. app.js)
      * and one CSS file (e.g. app.css) if your JavaScript imports CSS.
      */
-    .addEntry('app', './assets/app.js')
+    .addEntry('app', './assets/js/app.js')
+    .addEntry('document', './assets/js/document.js')
+    .addEntry('nav', './assets/js/nav.js')
+    .addEntry('formation', './assets/js/formation.js')
+    .addEntry('course', './assets/js/course.js')
+    .addEntry('footer', './assets/js/footer.js')
 
     // enables the Symfony UX Stimulus bridge (used in assets/bootstrap.js)
     .enableStimulusBridge('./assets/controllers.json')
