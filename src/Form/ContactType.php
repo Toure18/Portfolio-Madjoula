@@ -18,32 +18,32 @@ class ContactType extends AbstractType
         $builder
             ->add('Name', TextType::class, [
                 'attr' =>[
-                    'class'=>'form-control fs-2',
+                    'class'=>'form-control fs-4',
                     'placeholder'=>'NOM'
                 ]
             ])
             ->add('mail', EmailType::class, [
                 'attr' =>[
-                    'class'=>'form-control fs-2',
+                    'class'=>'form-control fs-4',
                     'placeholder'=>'E-MAIL'
                 ]
             ])
             ->add('Compagny_Name', TextType::class, [
                 'attr' =>[
-                    'class'=>'form-control fs-2',
+                    'class'=>'form-control fs-4',
                     'placeholder'=>'Entreprise (falcutative)'
                 ]
             ])
             ->add('body_text', TextareaType::class, [
                 'attr' =>[
-                    'class'=>'form-control fs-2',
+                    'class'=>'form-control fs-4',
                     'placeholder'=>'Votre demande',
                     'rows' => 3
                 ]
             ])
             ->add('Envoyer', SubmitType::class, [
                 'attr' =>[
-                    'class'=>'btn btn-outline-secondary btn-lg m-3 fs-2',
+                    'class'=>'btn btn-outline-secondary btn-lg m-3 fs-4',
                     'placeholder'=>'E-MAIL'
                 ]
             ])
