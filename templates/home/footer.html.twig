@@ -4,7 +4,7 @@
 
 <footer class="d-flex bd-highlight justify-content-between pt-5">
     <a href="https://www.linkedin.com/in/madjoulatoure" class="ms-2" target="_blank"><img src="{{ asset('build/icons8-linkedin 1.svg') }}" alt="linkedin-link"></a>
-    <button class="btn btn-link fs-3 d-flex mt-2" data-bs-toggle="modal" data-bs-target="#exampleModal">Touré Madjoula © 2021</button>
+    <button class="btn btn-link text-secondary fs-5 d-flex mt-2" data-bs-toggle="modal" data-bs-target="#exampleModal">Touré Madjoula © 2021</button>
     <a href="https://github.com/Toure18" target="_blank" class="me-2"><img src="{{ asset('build/icons8-github-2 1.svg') }}" alt="github-link"></a>
 </footer>
 
@@ -13,51 +13,27 @@
     <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
         <div class="modal-content p-0">
             <div class="modal-header">
-                <h1 class="modal-title fs-2 text-bold" id="exampleModalLabel">A propos</h1>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <h3 class="fw-bold text-light">A propos</h3>
+                <button type="button" class="btn-close btn" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body d-flex flex-column p-0">
-                <section class="center-aligned">
-                <img src="{{ asset('build/livre-photo-voyage_structure.jpg') }}" alt="" class="background-image w-100">
                 <p class="text-bold p-3 text">
                 Je m'appelle Madjoula, j'ai décidée de réaliser ce site internet afin de mettre a profit mes compétences.
                 A travers un site de présentation qui reprend en outre mon parcours, mon cv mais aussi ma motivation ainsi que
                 mes activités extra professionnelle.</p>
-                </section>
-
-               <h2 class="fs-5 text-center">Ce site a étais réaliser avec: </h2>
-                <ul class="list-group p-2">
-                    <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
-                        <div class="flex-column">
-                            Don Quixote
-                            <p><small>by Miguel de Cervantes</small></p>
-                            <span class="badge badge-info badge-pill"> 2 Copies in Stock</span>
-                        </div>
-                        <div class="image-parent">
-                            <img src="..." class="img-fluid" alt="quixote">
-                        </div>
-                    </a>
-                    <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center">
-                        <div class="flex-column">
-                            As I Lay Dying
-                            <p><small>by William Faulkner</small></p>
-                            <span class="badge badge-primary badge-pill"> 5 Copies in Stock</span>
-                        </div>
-                        <div class="image-parent">
-                            <img src="..." class="img-fluid" alt="lay">
-                        </div>
-                    </a>
-                    <a href="#" class="list-group-item list-group-item-action d-flex justify-content-between align-items-center disabled">
-                        <div class="flex-column">
-                            Things Fall Apart
-                            <p><small>by Miguel de Cervantes</small></p>
-                            <span class="badge badge-danger badge-pill"> 0 Copies in Stock</span>
-                        </div>
-                        <div class="image-parent">
-                            <img src="..." class="img-fluid" alt="things">
-                        </div>
-                    </a>
-                </ul>
+                <hr>
+                <h4 class="text-center text-decoration-underline">Langage utilisés pour réaliser ce site:</h4>
+                <div class="d-flex flex-wrap justify-content-center language-container">
+                    <img src="{{ asset('build/symfony.jpg') }}" class="rounded-circle" alt="language-logo">
+                    <img src="{{ asset('build/symfony.jpg') }}" class="rounded-circle" alt="language-logo">
+                    <img src="{{ asset('build/symfony.jpg') }}" class="rounded-circle" alt="language-logo" >
+                    <img src="{{ asset('build/symfony.jpg') }}" class="rounded-circle" alt="language-logo" >
+                    <img src="{{ asset('build/symfony.jpg') }}" class="rounded-circle" alt="language-logo" >
+                    <img src="{{ asset('build/symfony.jpg') }}" class="rounded-circle" alt="language-logo" >
+                    <img src="{{ asset('build/symfony.jpg') }}" class="rounded-circle" alt="language-logo" >
+                    <img src="{{ asset('build/symfony.jpg') }}" class="rounded-circle" alt="language-logo" >
+                    <img src="{{ asset('build/symfony.jpg') }}" class="rounded-circle" alt="language-logo" >
+                </div>
             </div>
         </div>
     </div>

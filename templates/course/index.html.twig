@@ -2,101 +2,37 @@
 
 {% block title %}Hello CourseController!{% endblock %}
 
- {% block stylesheets %}
-     {{ encore_entry_link_tags('course') }}
- {% endblock %}
+{% block stylesheets %}
+    {{ encore_entry_link_tags('course') }}
+{% endblock %}
 
 {% block body %}
-    <div class="timeline-container timeline-horizontal">
-        <div class="button timeline-toggle" aria-label="toggle between horizontal and vertical timeline" role="button" tabindex="0"><i class="fas fa-arrows-alt-v"></i>&emsp;<i class="fas fa-arrows-alt-h"></i></div>
-        <div class="timeline-scroll-controls">
-            <div class="timeline-scroll-prev button" aria-label="scroll to earlier events" role="button" tabindex="0"><i class="fas fa-angle-double-left"></i><i class="fas fa-angle-double-up"></i></div>
-            <div class="timeline-scroll-next button" aria-label="scroll to later events" role="button" tabindex="0"><i class="fas fa-angle-double-right"></i><i class="fas fa-angle-double-down"></i></div>
-        </div>
-        <div class="timeline">
-            {% for course in courses %}
-            <div class="event birth">
-                <div class="event-date-title">
-                    <h5>{{ course.years }}</h5>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="page-header">
+                    <h1 class="text-center">Mon parcours</h1>
                 </div>
-                <div class="event-icon"><i class="fas fa-baby"></i></div>
-                <div class="event-detail">
-                    <span class="event-type">{{ course.title }}</span>
-
-                    <span class="country">{{ course.description }}</span>
-
-                    <span class="source">Source:6157781</span>
-
-                    <span class="date">30th November 1874</span>
-
+                <div class="container-timeline" id="content">
+                    <ul class="timeline timeline-horizontal" id="block">
+                        {% for course in courses %}
+                        <li class="timeline-item">
+                            <div class="timeline-badge" data-toggle="popover" data-bs-placement="bottom" title="{{ course.title }}" data-bs-container="body" data-bs-content="{{ course.description }}">
+                                {{ course.years }}
+                            </div>
+                            <div class="mb-5"><h2 class="pb-3 ms-3 mt-1 title-event">{{ course.title }}</h2></div>
+                        </li>
+                        {% endfor %}
+                    </ul>
                 </div>
-            </div>
-            {% endfor %}
-            {% for course in courses %}
-                <div class="event birth">
-                    <div class="event-date-title">
-                        <h5>{{ course.years }}</h5>
-                    </div>
-                    <div class="event-icon"><i class="fas fa-baby"></i></div>
-                    <div class="event-detail">
-                        <span class="event-type">{{ course.title }}</span>
-
-                        <span class="country">{{ course.description }}</span>
-
-                        <span class="source">Source:6157781</span>
-
-                        <span class="date">30th November 1874</span>
-
-                    </div>
+                <div class="d-flex justify-content-center next">
+                    <button class="btn m-2 rounded-circle fs-5" id="left"><i class="fas fa-chevron-left"></i></button>
+                    <button class="btn m-2 rounded-circle fs-5" id="right"><i class="fas fa-chevron-right"></i></button>
                 </div>
-            {% endfor %}
-            {% for course in courses %}
-                <div class="event birth">
-                    <div class="event-date-title">
-                        <h5>{{ course.years }}</h5>
-                    </div>
-                    <div class="event-icon"><i class="fas fa-baby"></i></div>
-                    <div class="event-detail">
-                        <span class="event-type">{{ course.title }}</span>
-
-                        <span class="country">{{ course.description }}</span>
-
-                        <span class="source">Source:6157781</span>
-
-                        <span class="date">30th November 1874</span>
-
-                    </div>
-                </div>
-            {% endfor %}
-            {% for course in courses %}
-                <div class="event birth">
-                    <div class="event-date-title">
-                        <h5>{{ course.years }}</h5>
-                    </div>
-                    <div class="event-icon"><i class="fas fa-baby"></i></div>
-                    <div class="event-detail">
-                        <span class="event-type">{{ course.title }}</span>
-
-                        <span class="country">{{ course.description }}</span>
-
-                        <span class="source">Source:6157781</span>
-
-                        <span class="date">30th November 1874</span>
-
-                    </div>
-                </div>
-            {% endfor %}
             </div>
         </div>
     </div>
-
- {#  <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
-    <script>
-        $(function() {
-
-            $('.timeline-toggle').on('click',function() { // button to toggle between horizontal and vertical timelines
-                $('.timeline-container').toggleClass(' timeline-horizontal timeline-vertical');
-            });
-        });
-    </script> #}
+{% endblock %}
+{% block javascripts %}
+    {{ encore_entry_script_tags('course') }}
 {% endblock %}
