@@ -21,7 +21,7 @@ body {
 
 .card-body{
     text-align: justify;
-    font-size: 35px;
+    font-size: 20px;
 }
 
 /* footer style */
@@ -30,7 +30,7 @@ footer{
     padding: 15px;
 }
 @media screen and (max-width: 699px){
-    .card-body{
-        font-size: 25px;
+    .presentation{
+        padding: 25px;;
     }
 }

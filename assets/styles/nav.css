@@ -5,31 +5,23 @@ nav{
     opacity : 0.6;
 }
 
+
 nav img{
-    width: 150px;
+    width: 80px;
 }
 
 .navbar-brand{
-   font-size: 4rem;
+    font-size: 2rem;
 }
 
 .nav-link{
-    font-size: 35px;
+    font-size: 20px;
 }
 
-@media screen and (max-width: 699px){
-    nav img{
-        width: 80px;
-    }
 
-    .navbar-brand{
-        font-size: 2rem;
-    }
 
-    .nav-link{
-        font-size: 20px;
-    }
-}
+
+
 
 
 

@@ -1,5 +1,8 @@
 
 /* style picture document*/
+.content{
+    display: flex;
+}
 .center-aligned {
     display: flex;
     align-items: center;
@@ -8,8 +11,15 @@
 
 .background-image {
     position: relative;
+    width: 25%;
 }
-
 .text {
     position: absolute;
+}
+
+@media screen and (max-width: 699px) {
+    .content{
+        display: flex;
+        flex-direction: column;
+    }
 }
