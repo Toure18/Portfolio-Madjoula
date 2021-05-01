@@ -38,7 +38,6 @@
     clear: both;
 }
 .timeline .timeline-item .timeline-badge {
-
     width: 54px;
     height: 54px;
     line-height: 52px;
@@ -93,7 +92,7 @@
     float: right;
     left: 16px;
 }
-.next{
+#left, #right {
     display: none;
 }
 
@@ -162,14 +161,11 @@
         left: 43px;
     }
     .next{
-        display: block;
         padding: 20px 0px 20px 0px;
     }
-    #left{
+    #left,  #right{
         background-color: lavenderblush;
-    }
-    #right{
-        background-color: lavenderblush;
+        display: block;
     }
     .title-event{
         display: block;

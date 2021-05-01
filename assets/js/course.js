@@ -21,7 +21,7 @@ $(document).keydown(function (e) {
 });
 
 $(document).ready(function(){
-    $('[data-toggle="popover"]').popover({placement:'bottom'});
+    $('[data-toggle="popover"]').popover();
 
     var pWidth = $('li').width();
 

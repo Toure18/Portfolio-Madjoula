@@ -13,8 +13,7 @@
             </div>
         {% endfor %}
         <div class="card-body">
-            {{ form_start(form, {'attr': {'class': 'm-5'}}) }}
-            <h1 class="text-bold text-decoration-underline text-center">Contacter moi</h1>
+            {{ form_start(form, {'attr': {'class': 'ms-5 mt-0 mb-5'}}) }}
             <div class="mb-2">
                 <label for="{{ form.Name.vars.id }}"></label>
                 {{ form_widget(form.Name) }}
